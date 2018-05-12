@@ -1,204 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:clipToPadding="false"
-    tools:context=".MainActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <RelativeLayout
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
+
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            android:src="@drawable/naturetouch"
-             />
+            android:id="@+id/image_phone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_launcher_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_email" />
+
         <TextView
+            style="@style/AppTheme"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:textStyle="italic"
-            android:textSize="30sp"
-            android:text="Nature Touch"/>
-
-    </RelativeLayout>
-    </LinearLayout>
-
-        <TextView
-            android:id="@+id/businessTitle"
-            style="@style/AppTheme"
-            android:paddingTop="20dp"
-            android:paddingLeft="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:text="@string/companyNameText"
             android:textColor="@color/colorPrimaryText"
             android:textSize="20sp"
-             />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:elevation="30dp"
-            android:layout_margin="5dp"
-            android:paddingLeft="30dp"
-            android:paddingTop="15dp">
-            <ImageView
-                android:id="@+id/image_location"
-                android:src="@mipmap/ic_launcher_map"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                 />
-            <TextView
-                android:id="@+id/businessAddress"
-                style="@style/AppTheme"
-                android:paddingLeft="12dp"
-                android:text="@string/addressText"
-                 />
-
-        </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp"
-        android:paddingLeft="30dp">
-
-
-        <ImageView
-            android:id="@+id/image_website"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_url"
-             />
-
-
-    <TextView
-        android:id="@+id/businessWebsite"
-        style="@style/AppTheme"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-
-        android:paddingLeft="12dp"
-        android:text="@string/hyperlink"
-        />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp"
-        android:paddingLeft="30dp">
-
-
-        <ImageView
-            android:id="@+id/image_email"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_email"
-            />
         <TextView
             style="@style/AppTheme"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/email"
-            />
-    </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="3dp"
-            android:paddingLeft="30dp">
+            app:layout_constraintBottom_toBottomOf="@+id/image_email"
+            app:layout_constraintStart_toEndOf="@+id/image_email"
+            app:layout_constraintTop_toTopOf="@+id/image_email" />
 
-
-            <ImageView
-                android:id="@+id/image_phone"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@mipmap/ic_launcher_phone"
-                />
-            <TextView
-                style="@style/AppTheme"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:paddingLeft="12dp"
-                android:text="@string/phoneNo"
-                />
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="3dp"
-        android:paddingLeft="30dp">
-
-
-        <ImageView
-
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@mipmap/ic_launcher_hours"
-            />
         <TextView
             style="@style/AppTheme"
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:paddingLeft="12dp"
-            android:text="@string/hours"
-            />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        style="@style/AppTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="9dp"
-        android:paddingTop="8dp"
-        android:textSize="15sp"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="italic"
-        android:text="@string/companyDescText"
-         />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingLeft="140dp">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/hyperlink"
+            app:layout_constraintBottom_toBottomOf="@+id/image_website"
+            app:layout_constraintStart_toEndOf="@+id/image_website"
+            app:layout_constraintTop_toTopOf="@+id/image_website" />
 
         <ImageView
             android:id="@+id/image_fb"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_facebook" />
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <ImageView
             android:id="@+id/image_twitter"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:src="@drawable/ic_twitter"
-            android:layout_marginLeft="30dp"/>
-    </LinearLayout>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_fb"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
+        <ImageView
+            android:id="@+id/image_location"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_launcher_map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_launcher_hours"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_phone" />
+
+        <TextView
+            style="@style/AppTheme"
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/phoneNo"
+            app:layout_constraintBottom_toBottomOf="@+id/image_phone"
+            app:layout_constraintStart_toEndOf="@+id/image_phone"
+            app:layout_constraintTop_toTopOf="@+id/image_phone" />
+
+        <ImageView
+            android:id="@+id/image_website"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_launcher_url"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_location" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/naturetouch" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nature Touch"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/AppTheme"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="27dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/addressText"
+            app:layout_constraintBottom_toBottomOf="@+id/image_location"
+            app:layout_constraintStart_toEndOf="@+id/image_location"
+            app:layout_constraintTop_toTopOf="@+id/image_location" />
+
+        <TextView
+            style="@style/AppTheme"
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/hours"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/AppTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/companyDescText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <ImageView
+            android:id="@+id/image_email"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/ic_launcher_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_website" />
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>
